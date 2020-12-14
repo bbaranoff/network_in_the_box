@@ -1,0 +1,11 @@
+--- a/usr/lib/systemd/system/osmo-msc.service	2019-11-06 20:44:17.933374786 +0100
++++ b/usr/lib/systemd/system/osmo-msc.service	2019-11-06 20:54:44.973354023 +0100
+@@ -8,7 +8,7 @@
+ [Service]
+ Type=simple
+ Restart=always
+-ExecStart=/usr/bin/osmo-msc -c /etc/osmocom/osmo-msc.cfg
++ExecStart=/usr/bin/osmo-msc -c /etc/osmocom/osmo-msc.cfg -M /tmp/msc_mncc
+ RestartSec=2
+ 
+ [Install]
